@@ -1,0 +1,74 @@
+/* Contact.css */
+
+.custom-table {
+    width: 90%;
+    border-collapse: collapse;
+    margin: 5% ;
+    padding: 20vh;
+    font-size: 1em;
+    font-family: sans-serif;
+    min-width: 400px;
+    text-align: left;
+  }
+  
+  .custom-table thead tr {
+    background-color: #f3f3f3;
+    color: BLACK;
+    font-weight: bold;
+  }
+  
+  .custom-table th,
+  .custom-table td {
+    padding: 12px 15px;
+    border: 1px solid #dddddd;
+  }
+  
+  .custom-table tbody tr:nth-child(even) {
+    background-color: #f3f3f3;
+  }
+  
+  .custom-table tbody tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Responsive styling */
+  @media (max-width: 768px) {
+    /* Make the table container scrollable on smaller screens */
+    .custom-table {
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+      border: 0;
+    }
+  
+    .custom-table thead {
+      display: none; /* Hide the table header for mobile view */
+    }
+  
+    .custom-table tbody tr {
+      display: block;
+      margin-bottom: 10px;
+      border: 1px solid #ddd;
+      padding: 10px;
+    }
+  
+    .custom-table td {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 10px;
+      text-align: left;
+      border: none;
+      border-bottom: 1px solid #ddd;
+      font-weight: bold;
+    }
+  
+    .custom-table td::before {
+      content: attr(data-label);
+      font-weight: normal;
+      text-transform: uppercase;
+      color: #009879;
+      font-size: 0.8em;
+      margin-right: 10px;
+    }
+  }
+  

@@ -1,0 +1,210 @@
+/* =============================== */
+/* SECTION */
+/* =============================== */
+
+.life-hostels-section {
+  padding: 100px 20px;
+  background: linear-gradient(to bottom, #f9fafc, #ffffff);
+  overflow: hidden;
+}
+
+/* =============================== */
+/* HEADER */
+/* =============================== */
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-header h2 {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 600;
+  color: #1f3c88;
+  margin-bottom: 15px;
+}
+
+.section-divider {
+  height: 4px;
+  background: linear-gradient(to right, #1f3c88, #3f51b5);
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+/* =============================== */
+/* CONTAINER */
+/* =============================== */
+
+.life-hostels-container {
+  display: flex;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =============================== */
+/* IMAGE SIDE */
+/* =============================== */
+
+.life-hostels-image {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.life-hostels-image img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+  object-fit: cover;
+}
+
+.hostel-title {
+  margin-top: 20px;
+}
+
+.hostel-title h3 {
+  font-size: 1.3rem;
+  margin-bottom: 6px;
+  color: #1f3c88;
+}
+
+.hostel-title span {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+/* =============================== */
+/* TEXT SIDE */
+/* =============================== */
+
+.life-hostels-text {
+  flex: 1;
+  position: relative;
+  padding: 40px;
+  border-radius: 20px;
+  background: linear-gradient(
+    135deg,
+    rgba(240, 244, 255, 0.7),
+    rgba(255, 255, 255, 0.9)
+  );
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.05);
+}
+
+.life-hostels-text p {
+  font-size: clamp(0.95rem, 1vw, 1.05rem);
+  line-height: 1.8;
+  margin-bottom: 18px;
+  color: #333;
+  text-align: justify;
+}
+
+/* =============================== */
+/* QUOTES */
+/* =============================== */
+
+.quote-mark {
+  font-size: 3rem;
+  color: #3f51b5;
+  opacity: 0.15;
+  position: absolute;
+  pointer-events: none;
+}
+
+.left-quote {
+  top: 10px;
+  left: 20px;
+}
+
+.right-quote {
+  bottom: 80px;
+  right: 20px;
+}
+
+/* =============================== */
+/* BUTTON */
+/* =============================== */
+
+.read-more-btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 28px;
+  background: linear-gradient(to right, #1f3c88, #3f51b5);
+  color: white;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 500;
+  box-shadow: 0 6px 20px rgba(31, 60, 136, 0.25);
+  transition: all 0.3s ease;
+}
+
+.read-more-btn:hover {
+  box-shadow: 0 8px 30px rgba(31, 60, 136, 0.35);
+}
+
+/* =============================== */
+/* RESPONSIVE */
+/* =============================== */
+
+@media (max-width: 992px) {
+  .life-hostels-container {
+    gap: 40px;
+  }
+
+  .life-hostels-image img {
+    max-width: 380px;
+  }
+}
+
+@media (max-width: 768px) {
+  .life-hostels-section {
+    padding: 80px 15px;
+  }
+
+  .life-hostels-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .life-hostels-text {
+    padding: 30px;
+  }
+
+  .quote-mark {
+    font-size: 2rem;
+  }
+
+  .right-quote {
+    bottom: 60px;
+  }
+
+  .read-more-btn {
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .life-hostels-section {
+    padding: 60px 12px;
+  }
+
+  .life-hostels-image img {
+    max-width: 300px;
+  }
+
+  .life-hostels-text {
+    padding: 22px;
+  }
+
+  .quote-mark {
+    display: none; /* Prevents overlap on small screens */
+  }
+}

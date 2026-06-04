@@ -1,0 +1,187 @@
+/* Chief Warden Message Section */
+.warden-message-section {
+  padding: 60px 20px;
+  background-color: #f8f9fa;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-header h2 {
+  color: #1a237e;
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.section-divider {
+  height: 4px;
+  width: 80px;
+  background: linear-gradient(to right, #1a237e, #3949ab);
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+.director-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: white;
+  padding: 40px;
+  border-radius: 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.director-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-width: 250px;
+}
+
+.director-image img {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+  object-fit: cover;
+  border: 5px solid #fff;
+}
+
+.director-title {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.director-title h3 {
+  color: #1a237e;
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.director-title span {
+  color: #555;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.director-text {
+  flex: 1;
+  position: relative;
+  min-width: 300px;
+  padding: 20px 30px;
+  background-color: rgba(240, 242, 245, 0.5);
+  border-radius: 15px;
+}
+
+.quote-mark {
+  font-size: 2.5rem;
+  color: #3949ab;
+  opacity: 0.3;
+  position: absolute;
+}
+
+.left-quote {
+  top: 0;
+  left: 10px;
+}
+
+.right-quote {
+  bottom: 70px;
+  right: 10px;
+}
+
+.director-text p {
+  color: #444;
+  line-height: 1.8;
+  margin-bottom: 15px;
+  font-size: 1.05rem;
+  text-align: justify;
+}
+
+.signature {
+  margin-top: 20px;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.signature span {
+  font-style: italic;
+  color: #777;
+}
+
+.signature strong {
+  color: #1a237e;
+}
+
+.read-more-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 25px;
+  background-color: #1a237e;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(26, 35, 126, 0.2);
+}
+
+.read-more-btn:hover {
+  background-color: #3949ab;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(26, 35, 126, 0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .director-container {
+    padding: 30px;
+  }
+  
+  .section-header h2 {
+    font-size: 2.2rem;
+  }
+  
+  .director-text p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .warden-message-section {
+    padding: 40px 15px;
+  }
+  
+  .section-header h2 {
+    font-size: 1.8rem;
+  }
+  
+  .director-container {
+    padding: 25px;
+    gap: 20px;
+  }
+  
+  .director-image img {
+    width: 180px;
+  }
+  
+  .quote-mark {
+    font-size: 2rem;
+  }
+  
+  .right-quote {
+    bottom: 60px;
+  }
+}

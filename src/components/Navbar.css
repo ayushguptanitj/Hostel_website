@@ -1,0 +1,349 @@
+/* ============================================
+   NITJ Navbar — Minimal Premium Design
+   ============================================ */
+
+/* Remove ALL underlines from nav links globally */
+.nb-header a,
+.nb-header a:hover,
+.nb-header a:visited,
+.nb-header a:active,
+.nb-header a:focus {
+  text-decoration: none;
+}
+
+/* ── Header Shell ── */
+.nb-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(0, 43, 92, 0.07);
+  transition: box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.nb-header--scrolled {
+  background: rgba(255, 255, 255, 0.97);
+  box-shadow: 0 1px 24px rgba(0, 43, 92, 0.1);
+}
+
+/* ── Nav Container ── */
+.nb-nav {
+  max-width: 1280px;
+  margin: 0 auto;
+  height: 68px;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+/* ── Logo ── */
+.nb-logo {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 1px;
+  text-decoration: none;
+  outline: none;
+}
+
+
+
+.nb-logo-primary {
+  font-size: 15px;
+  font-weight: 800;
+  color: #002b5c;
+  line-height: 1.15;
+  letter-spacing: -0.2px;
+  font-family: 'Inter', 'Roboto', sans-serif;
+}
+
+.nb-logo-sub {
+  font-size: 13px;
+  font-weight: 600;
+  color: #0066cc;
+  letter-spacing: 0.2px;
+}
+
+/* ── Desktop Links ── */
+.nb-links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── Nav Link (anchor + button) ── */
+.nb-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 13px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #374a62;
+  text-decoration: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s ease, background 0.2s ease;
+  white-space: nowrap;
+  font-family: inherit;
+}
+
+.nb-link:hover {
+  color: #002b5c;
+  background: rgba(0, 43, 92, 0.05);
+}
+
+/* Active pill indicator (absolutely positioned behind text) */
+.nb-pill {
+  position: absolute;
+  inset: 0;
+  background: #eef4ff;
+  border-radius: 8px;
+  z-index: 0;
+}
+
+.nb-link-label {
+  position: relative;
+  z-index: 1;
+}
+
+.nb-link--active {
+  color: #1255b8;
+}
+
+.nb-link--active:hover {
+  background: transparent;
+  color: #1255b8;
+}
+
+/* Dropdown open state */
+.nb-link--dropdown-open {
+  color: #1255b8;
+  background: #eef4ff;
+}
+
+/* Link button variant */
+.nb-link-btn {
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+/* ── Chevron ── */
+.nb-chevron {
+  transition: transform 0.22s ease;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.nb-chevron--open {
+  transform: rotate(180deg);
+}
+
+/* ── Dropdown Wrapper ── */
+.nb-has-dropdown {
+  position: relative;
+}
+
+/* ── Dropdown Menu ── */
+.nb-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 6px 0;
+  min-width: 268px;
+  list-style: none;
+  box-shadow:
+    0 4px 6px -1px rgba(0, 43, 92, 0.07),
+    0 16px 40px -4px rgba(0, 43, 92, 0.13);
+  border: 1px solid rgba(0, 43, 92, 0.07);
+  overflow: hidden;
+  z-index: 100;
+}
+
+.nb-dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 16px;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #2d3d54;
+  text-decoration: none;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.nb-dropdown-item:hover {
+  background: #f0f6ff;
+  color: #1255b8;
+}
+
+.nb-dropdown-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  opacity: 0.35;
+  flex-shrink: 0;
+  transition: opacity 0.15s;
+}
+
+.nb-dropdown-item:hover .nb-dropdown-dot {
+  opacity: 0.8;
+}
+
+/* ── Hamburger (Mobile) ── */
+.nb-hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: 8px;
+  background: none;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+  z-index: 50;
+}
+
+.nb-hamburger:hover {
+  background: rgba(0, 43, 92, 0.06);
+}
+
+.nb-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #002b5c;
+  border-radius: 99px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.nb-bar--1-open { transform: translateY(7px) rotate(45deg); }
+.nb-bar--2-open { opacity: 0; }
+.nb-bar--3-open { transform: translateY(-7px) rotate(-45deg); }
+
+/* ── Mobile Menu ── */
+.nb-mobile-menu {
+  position: absolute;
+  top: 68px;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border-top: 1px solid rgba(0, 43, 92, 0.07);
+  box-shadow: 0 16px 40px rgba(0, 43, 92, 0.1);
+  overflow: hidden;
+  z-index: 99;
+}
+
+.nb-mobile-list {
+  list-style: none;
+  margin: 0;
+  padding: 8px 16px 16px;
+  max-height: calc(100vh - 68px);
+  overflow-y: auto;
+}
+
+.nb-mobile-item {
+  border-bottom: 1px solid rgba(0, 43, 92, 0.06);
+}
+
+.nb-mobile-item:last-child {
+  border-bottom: none;
+}
+
+.nb-mobile-link {
+  display: block;
+  padding: 13px 4px;
+  font-size: 14.5px;
+  font-weight: 600;
+  color: #2d3d54;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.nb-mobile-link:hover,
+.nb-mobile-link--active {
+  color: #1255b8;
+}
+
+.nb-mobile-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 13px 4px;
+  background: none;
+  border: none;
+  font-size: 14.5px;
+  font-weight: 600;
+  color: #2d3d54;
+  cursor: pointer;
+  text-align: left;
+  font-family: inherit;
+  transition: color 0.2s;
+}
+
+.nb-mobile-toggle:hover {
+  color: #1255b8;
+}
+
+.nb-mobile-sub {
+  list-style: none;
+  padding: 4px 0 8px 8px;
+  margin: 0;
+  overflow: hidden;
+}
+
+.nb-mobile-sub-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #4a5e78;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.15s, color 0.15s;
+}
+
+.nb-mobile-sub-link:hover {
+  background: #f0f6ff;
+  color: #1255b8;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1023px) {
+  .nb-links {
+    display: none;
+  }
+
+  .nb-hamburger {
+    display: flex;
+  }
+}
+
+@media (max-width: 400px) {
+  .nb-logo-primary {
+    font-size: 13.5px;
+  }
+  .nb-logo-sub {
+    font-size: 10px;
+  }
+}

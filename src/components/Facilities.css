@@ -1,0 +1,232 @@
+.allfacilities {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+  
+  .facility-container {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px; /* Add rounded corners for better aesthetics */
+    overflow: hidden;
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+    margin-bottom: 20px; /* Add bottom margin for spacing */
+  }
+  
+  /* Hover effect */
+  .facility-container:hover {
+    transform: translateY(-5px);
+  }
+  
+  .facilities-heading {
+    margin: 5vw 5vw;
+    display: flex;
+    align-items: center;
+  }
+  
+  .facilities-heading hr {
+    border: 0;
+    height: 2.5px;
+    width: 4em;
+    background-color: orange;
+    margin: 0;
+    margin-left: 10px;
+  }
+  
+  .facility-logo {
+    padding: 0.5em;
+    font-size: 1.5em;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+  }
+  
+  .facility-logo img {
+    width: 70px; /* Use fixed width for consistency */
+    height: auto;
+  }
+  
+  .facility-details {
+    padding: 1em;
+    flex: 1; /* Take up remaining space */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .facility-container h1 {
+    font-size: 1.1em; /* Slightly bigger for readability */
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .facility-container p {
+    font-size: 0.85em;
+    color: #555;
+    line-height: 1.5;
+  }
+  
+  .facility-container h3 {
+    font-size: 0.85em;
+    color: #888;
+    font-style: italic;
+    margin-top: 10px;
+  }
+  
+  /* Mobile responsiveness */
+  @media (min-width: 768px) {
+    .facility-container {
+      width: 48%; /* For medium screens, 2 items in a row */
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .facility-container {
+      width: 30%; /* For large screens, 3 items in a row */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .facility-container {
+      width: 100%; /* For small screens, 1 item per row */
+    }
+  
+    .allfacilities {
+      padding: 10px;
+      width: 100%;
+      margin: 0;
+      gap: 1em; /* Reduce gap for smaller screens */
+    }
+  }
+  
+  .facility-container.enhanced,
+  .facility-container.glass {
+    flex: 1 1 300px;
+    max-width: 340px;
+    min-width: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.55);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.10);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1.5px solid rgba(255, 255, 255, 0.18);
+    transition: box-shadow 0.3s, border-color 0.3s, transform 0.3s;
+    padding: 1.2rem 1rem 1rem 1rem;
+    margin-bottom: 0;
+    height: auto;
+    min-height: unset;
+    max-height: unset;
+    overflow: visible;
+  }
+  
+  .facility-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.7em;
+    margin-bottom: 0.5em;
+  }
+  .facility-icon {
+    font-size: 2.1em;
+    margin-right: 0.5em;
+    filter: drop-shadow(0 2px 6px #e3e7fa);
+    user-select: none;
+  }
+  .facility-logo img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    border-radius: 10px;
+    margin-right: 0.5em;
+    background: #fff;
+    box-shadow: 0 1px 6px rgba(26,35,126,0.07);
+  }
+  .facilitytitle {
+    font-size: 1.15em;
+    color: #1a237e;
+    font-weight: 600;
+    margin: 0;
+  }
+  .facility-details {
+    width: 100%;
+    text-align: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: unset;
+    max-height: unset;
+    overflow: visible;
+  }
+  .facility-details p {
+    font-size: 1em;
+    color: #333;
+    margin-bottom: 0.5em;
+  }
+  .facility-details h3 {
+    font-size: 0.98em;
+    color: #888;
+    font-style: italic;
+    margin-top: 0.2em;
+  }
+  
+  @media (min-width: 768px) {
+    .facility-container.enhanced {
+      width: 48%;
+    }
+  }
+  @media (min-width: 1024px) {
+    .facility-container.enhanced {
+      width: 30%;
+    }
+  }
+  @media (max-width: 768px) {
+    .facility-container.enhanced {
+      width: 100%;
+      min-height: 180px;
+      padding: 0.8rem 0.5rem 0.7rem 0.7rem;
+    }
+    .facility-logo img {
+      width: 36px;
+      height: 36px;
+    }
+    .facility-icon {
+      font-size: 1.4em;
+    }
+  }
+  
+  @media (max-width: 900px) {
+    .allfacilities {
+      gap: 1.2rem;
+      padding: 10px 0;
+    }
+    .facility-container.enhanced {
+      max-width: 100%;
+      min-width: 180px;
+    }
+  }
+  
+  .facility-container.glass:hover {
+    box-shadow: 0 16px 48px 0 rgba(31, 38, 135, 0.18);
+    border-color: #b3baf7;
+    transform: scale(1.05);
+  }
+  
+  @media (max-width: 900px) {
+    .facility-container.glass {
+      max-width: 100%;
+      min-width: 180px;
+    }
+  }
+  

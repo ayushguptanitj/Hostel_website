@@ -1,0 +1,21 @@
+{
+    "HostelA": {
+      "name": "Hostel A",
+      "carouselImages": ["image1.jpg", "image2.jpg"],
+      "about": "Hostel A is known for ...",
+      "wardenMessage": "Welcome to Hostel A",
+      "messMenu": ["Breakfast: Toast", "Lunch: Rice", "Dinner: Curry"],
+      "facilities": ["WiFi", "Library"],
+      "galleryImages": ["gallery1.jpg", "gallery2.jpg"]
+    },
+    "HostelB": {
+      "name": "Hostel B",
+      "carouselImages": ["image3.jpg", "image4.jpg"],
+      "about": "Hostel B offers ...",
+      "wardenMessage": "Hello from Hostel B",
+      "messMenu": ["Breakfast: Eggs", "Lunch: Pasta", "Dinner: Salad"],
+      "facilities": ["Gym", "Study Room"],
+      "galleryImages": ["gallery3.jpg", "gallery4.jpg"]
+    }
+  }
+  

@@ -1,0 +1,309 @@
+/* ============================================================
+   Hostel Committee — Component Styles
+   ============================================================ */
+
+/* ── Root ─────────────────────────────────────────────────── */
+.hc-root {
+  width: 100%;
+}
+
+/* ── Summary bar ──────────────────────────────────────────── */
+.hc-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+  padding: 10px 16px;
+  background: linear-gradient(90deg, #eef4ff 0%, #f5f3ff 100%);
+  border-radius: 10px;
+  border: 1px solid rgba(18, 85, 184, 0.1);
+}
+
+.hc-summary-count {
+  font-size: 0.9rem;
+  color: #1255b8;
+  font-weight: 500;
+}
+
+.hc-summary-count strong {
+  font-size: 1.05rem;
+  font-weight: 800;
+  margin-right: 3px;
+}
+
+.hc-summary-note {
+  font-size: 0.78rem;
+  color: #7a8fa6;
+  font-weight: 500;
+  background: #fff;
+  padding: 3px 10px;
+  border-radius: 99px;
+  border: 1px solid rgba(0, 43, 92, 0.1);
+}
+
+/* ── Table wrapper ────────────────────────────────────────── */
+.hc-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 12px;
+  border: 1.5px solid rgba(0, 43, 92, 0.09);
+  box-shadow: 0 2px 12px rgba(0, 43, 92, 0.05);
+}
+
+/* ── Table ────────────────────────────────────────────────── */
+.hc-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Inter', 'Roboto', sans-serif;
+  font-size: 0.875rem;
+  background: #fff;
+  min-width: 640px;
+}
+
+/* Header */
+.hc-th {
+  background: #f8fafc;
+  color: #4b5a6e;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  padding: 13px 16px;
+  text-align: left;
+  border-bottom: 1.5px solid rgba(0, 43, 92, 0.09);
+  white-space: nowrap;
+}
+
+.hc-th--no {
+  width: 48px;
+  text-align: center;
+  color: #94a3b8;
+}
+
+/* Rows */
+.hc-tr {
+  transition: background 0.15s ease;
+}
+
+.hc-tr:hover {
+  background: #f8fafc;
+}
+
+.hc-tr:last-child .hc-td {
+  border-bottom: none;
+}
+
+.hc-td {
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(0, 43, 92, 0.06);
+  vertical-align: middle;
+  color: #0f1f3d;
+}
+
+.hc-td--no {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #94a3b8;
+  font-weight: 600;
+}
+
+/* ── Avatar ───────────────────────────────────────────────── */
+.hc-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 800;
+  flex-shrink: 0;
+  letter-spacing: 0.3px;
+}
+
+/* Name cell */
+.hc-name-cell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hc-name {
+  font-weight: 600;
+  color: #0f1f3d;
+  white-space: nowrap;
+}
+
+/* ── Roll No. chip ────────────────────────────────────────── */
+.hc-roll {
+  font-family: 'Courier New', monospace;
+  font-size: 0.78rem;
+  font-weight: 600;
+  background: #f1f5f9;
+  color: #334155;
+  padding: 3px 9px;
+  border-radius: 6px;
+  border: 1px solid rgba(0, 43, 92, 0.08);
+  white-space: nowrap;
+}
+
+/* ── Designation badge ────────────────────────────────────── */
+.hc-desig {
+  display: inline-block;
+  padding: 4px 11px;
+  border-radius: 99px;
+  font-size: 0.73rem;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  white-space: nowrap;
+}
+
+/* ── Email link ───────────────────────────────────────────── */
+.hc-email {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #1255b8;
+  text-decoration: none;
+  font-size: 0.83rem;
+  font-weight: 500;
+  transition: color 0.15s, opacity 0.15s;
+  word-break: break-all;
+}
+
+.hc-email:hover {
+  opacity: 0.75;
+  text-decoration: underline;
+}
+
+/* ── Mobile Cards (hidden on desktop) ────────────────────── */
+.hc-cards {
+  display: none;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.hc-member-card {
+  background: #fff;
+  border: 1.5px solid rgba(0, 43, 92, 0.09);
+  border-radius: 14px;
+  padding: 1rem 1.1rem;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.hc-member-card:hover {
+  box-shadow: 0 4px 20px rgba(18, 85, 184, 0.1);
+  transform: translateY(-2px);
+}
+
+.hc-mc-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 0.9rem;
+}
+
+.hc-mc-info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.hc-mc-name {
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: #0f1f3d;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.hc-mc-desig {
+  font-size: 0.68rem;
+  align-self: flex-start;
+}
+
+.hc-mc-no {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  font-weight: 600;
+  align-self: flex-start;
+}
+
+.hc-mc-details {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(0, 43, 92, 0.07);
+}
+
+.hc-mc-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.hc-mc-label {
+  font-size: 0.73rem;
+  font-weight: 700;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  min-width: 56px;
+  flex-shrink: 0;
+}
+
+/* ── Empty state ──────────────────────────────────────────── */
+.hc-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 3rem 1rem;
+  color: #7a8fa6;
+  font-size: 0.9rem;
+  text-align: center;
+  background: #f8fafc;
+  border-radius: 12px;
+  border: 1.5px dashed rgba(0, 43, 92, 0.12);
+}
+
+.hc-empty span {
+  font-size: 2.5rem;
+}
+
+/* ── Admin hint ───────────────────────────────────────────── */
+.hc-admin-hint {
+  margin-top: 1.25rem;
+  font-size: 0.76rem;
+  color: #94a3b8;
+  text-align: center;
+  padding: 10px 16px;
+  background: #f8fafc;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 43, 92, 0.06);
+}
+
+.hc-admin-hint code {
+  font-family: 'Courier New', monospace;
+  background: rgba(18, 85, 184, 0.07);
+  color: #1255b8;
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 0.73rem;
+}
+
+/* ── Responsive: switch to cards below 640 px ─────────────── */
+@media (max-width: 640px) {
+  .hc-table-wrap {
+    display: none;
+  }
+
+  .hc-cards {
+    display: flex;
+  }
+}

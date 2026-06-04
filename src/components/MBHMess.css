@@ -1,0 +1,63 @@
+/* src/Mess.css */
+
+.mess-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    width: 100vw;
+    padding: 5vw;
+    margin: auto;
+    
+    background-color: #1b3023;
+    border-radius: 8px;
+  }
+  
+  .mess-container .text-content {
+    flex: 2;
+    margin-right: 20px;
+  }
+  
+  .mess-container .text-content .mess-heading {
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .mess-container .text-content .mess-heading span {
+    margin-right: 10px;
+  }
+  
+  .mess-container .text-content .mess-heading hr {
+    border: 0;
+    height: 2.5px;
+    opacity: 1;
+    width:4em; /* Adjust width as needed */
+    background-color: rgb(255, 115, 0);
+    background-color: orange; /* Orange color for the HR */
+    margin: 0;
+    margin-left: 10px; /* Space between the text and HR */
+  }
+  
+  .mess-container .text-content p {
+    line-height: 1.6;
+    color: #d5d5d5;
+    margin-bottom: 1rem;
+  }
+  
+  .mess-container .image-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .mess-container .image-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  

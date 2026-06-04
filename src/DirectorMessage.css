@@ -1,0 +1,249 @@
+/* =============================== */
+/* SECTION WRAPPER */
+/* =============================== */
+
+.director-message-section {
+  padding: 80px 20px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+/* =============================== */
+/* HEADER */
+/* =============================== */
+
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-header h2 {
+  color: #1a237e;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.section-divider {
+  height: 4px;
+  background: linear-gradient(to right, #ff9800, #ff5722);
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+/* =============================== */
+/* CONTAINER */
+/* =============================== */
+
+.director-message-container {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px;
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.06);
+  gap: 40px;
+  position: relative;
+}
+
+.director-message-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 5px;
+  width: 100%;
+  background: linear-gradient(to right, #ff9800, #ff5722);
+}
+
+/* =============================== */
+/* IMAGE SIDE */
+/* =============================== */
+
+.director-message-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.director-message-image img {
+  width: 240px;
+  border-radius: 14px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.12);
+  object-fit: cover;
+  border: 6px solid #ffffff;
+}
+
+.director-title {
+  margin-top: 15px;
+}
+
+.director-title h3 {
+  color: #ff5722;
+  font-size: 1.3rem;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.director-title span {
+  color: #777;
+  font-size: 0.95rem;
+  font-style: italic;
+}
+
+/* =============================== */
+/* TEXT SIDE */
+/* =============================== */
+
+.director-message-text {
+  flex: 1;
+  position: relative;
+  padding: 35px;
+  border-radius: 18px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 248, 240, 0.7),
+    rgba(255, 255, 255, 0.9)
+  );
+}
+
+.director-message-text p {
+  color: #444;
+  line-height: 1.8;
+  margin-bottom: 18px;
+  font-size: clamp(0.95rem, 1vw, 1.05rem);
+  text-align: justify;
+}
+
+/* =============================== */
+/* QUOTES */
+/* =============================== */
+
+.quote-mark {
+  font-size: 3rem;
+  color: #ff9800;
+  opacity: 0.25;
+  position: absolute;
+  pointer-events: none;
+}
+
+.left-quote {
+  top: 10px;
+  left: 20px;
+}
+
+.right-quote {
+  bottom: 90px;
+  right: 25px;
+}
+
+/* =============================== */
+/* SIGNATURE */
+/* =============================== */
+
+.signature {
+  margin-top: 25px;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.signature span {
+  font-style: italic;
+  color: #777;
+}
+
+.signature strong {
+  color: #ff5722;
+}
+
+/* =============================== */
+/* BUTTON */
+/* =============================== */
+
+.read-more-btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 28px;
+  background: linear-gradient(to right, #ff5722, #ff9800);
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 50px;
+  box-shadow: 0 6px 18px rgba(255, 87, 34, 0.25);
+  transition: all 0.3s ease;
+}
+
+.read-more-btn:hover {
+  box-shadow: 0 8px 25px rgba(255, 87, 34, 0.35);
+}
+
+/* =============================== */
+/* RESPONSIVE */
+/* =============================== */
+
+@media (max-width: 992px) {
+  .director-message-container {
+    padding: 35px;
+    gap: 30px;
+  }
+
+  .director-message-image img {
+    width: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .director-message-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px;
+  }
+
+  .director-message-text {
+    padding: 25px;
+  }
+
+  .quote-mark {
+    font-size: 2rem;
+  }
+
+  .right-quote {
+    bottom: 70px;
+  }
+
+  .signature {
+    text-align: center;
+  }
+
+  .read-more-btn {
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .director-message-section {
+    padding: 60px 15px;
+  }
+
+  .director-message-image img {
+    width: 170px;
+  }
+
+  .director-message-text {
+    padding: 20px;
+  }
+
+  .quote-mark {
+    display: none; /* prevents overlap on very small screens */
+  }
+}
