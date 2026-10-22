@@ -1,0 +1,227 @@
+/* Student Corner — follows the hostel page palette:
+   navy #1a237e, orange accent #ff5722, card grey #f9f9f9, Inter. */
+
+.sc-root {
+  --sc-navy: #1a237e;
+  --sc-navy-tint: #e8eaf6;
+  --sc-accent: #ff5722;
+  --sc-accent-tint: #fff1eb;
+  --sc-text: #2d3d54;
+  --sc-muted: #6b7280;
+  --sc-border: #e5e7eb;
+  --sc-card: #f9f9f9;
+}
+
+/* Subtitle under the shared section header */
+.section-subtitle {
+  margin: 0.9rem 0 0;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #6b7280;
+}
+
+/* ── Toolbar ── */
+.sc-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.sc-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.sc-filter-btn {
+  padding: 0.4rem 1rem;
+  border: 1px solid var(--sc-border);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--sc-text);
+  font: inherit;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+
+.sc-filter-btn:hover {
+  border-color: var(--sc-navy);
+  color: var(--sc-navy);
+}
+
+.sc-filter-btn--active,
+.sc-filter-btn--active:hover {
+  background: var(--sc-navy);
+  border-color: var(--sc-navy);
+  color: #fff;
+}
+
+.sc-new-count {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--sc-accent);
+}
+
+/* ── Grid ── */
+.sc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr));
+  gap: 1.25rem;
+}
+
+.sc-card-wrapper {
+  display: flex;
+  min-width: 0;
+}
+
+/* ── Card ── */
+.sc-card {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem;
+  background: var(--sc-card);
+  border-radius: 8px;
+  border-top: 3px solid var(--sc-navy);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.sc-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(26, 35, 126, 0.1);
+}
+
+.sc-card-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.sc-tag {
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--sc-navy);
+  background: var(--sc-navy-tint);
+}
+
+.sc-tag--important {
+  color: #c2410c;
+  background: var(--sc-accent-tint);
+}
+
+.sc-new-badge {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--sc-accent);
+}
+
+.sc-date {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.8rem;
+  color: var(--sc-muted);
+  white-space: nowrap;
+}
+
+.sc-card-title {
+  margin: 0 0 0.5rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--sc-navy);
+}
+
+.sc-card-desc {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--sc-text);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.sc-card-desc--full {
+  display: block;
+  -webkit-line-clamp: unset;
+}
+
+.sc-card-footer {
+  margin-top: auto;
+  padding-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.sc-card-footer:empty {
+  display: none;
+}
+
+.sc-read-toggle {
+  padding: 0;
+  border: none;
+  background: none;
+  font: inherit;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--sc-navy);
+  cursor: pointer;
+}
+
+.sc-read-toggle:hover {
+  color: var(--sc-accent);
+}
+
+.sc-link-btn {
+  margin-left: auto;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--sc-accent);
+  text-decoration: none;
+}
+
+.sc-link-btn:hover {
+  text-decoration: underline;
+}
+
+/* ── Empty state ── */
+.sc-empty {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: var(--sc-muted);
+  background: var(--sc-card);
+  border-radius: 8px;
+}
+
+.sc-empty p {
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .sc-toolbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .sc-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,235 @@
+/* Hostel Committee — follows the hostel page palette:
+   navy #1a237e, orange accent #ff5722, card grey #f9f9f9, Inter. */
+
+.hc-root {
+  --hc-navy: #1a237e;
+  --hc-navy-tint: #e8eaf6;
+  --hc-accent: #ff5722;
+  --hc-accent-tint: #fff1eb;
+  --hc-text: #2d3d54;
+  --hc-muted: #6b7280;
+  --hc-border: #e5e7eb;
+  --hc-card: #f9f9f9;
+}
+
+/* ── Summary line ── */
+.hc-summary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  color: var(--hc-muted);
+}
+
+.hc-summary strong {
+  color: var(--hc-navy);
+  font-weight: 600;
+}
+
+/* ── Table ── */
+.hc-table-wrap {
+  border: 1px solid var(--hc-border);
+  border-radius: 8px;
+  overflow-x: auto;
+}
+
+.hc-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  color: var(--hc-text);
+}
+
+.hc-th {
+  padding: 0.85rem 1rem;
+  text-align: left;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--hc-navy);
+  background: var(--hc-card);
+  border-bottom: 1px solid var(--hc-border);
+  white-space: nowrap;
+}
+
+.hc-th--no,
+.hc-td--no {
+  width: 3rem;
+  text-align: center;
+}
+
+.hc-td {
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid var(--hc-border);
+  vertical-align: middle;
+}
+
+.hc-tr:last-child .hc-td {
+  border-bottom: none;
+}
+
+.hc-tr:hover {
+  background: #fafbff;
+}
+
+.hc-td--no {
+  color: var(--hc-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.hc-name-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.hc-avatar {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--hc-navy);
+  background: var(--hc-navy-tint);
+}
+
+.hc-name {
+  font-weight: 500;
+  color: var(--hc-text);
+}
+
+.hc-roll {
+  font-variant-numeric: tabular-nums;
+  color: var(--hc-muted);
+}
+
+/* Designation chip: neutral navy, leadership roles in the orange accent */
+.hc-desig {
+  display: inline-block;
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  white-space: nowrap;
+  color: var(--hc-navy);
+  background: var(--hc-navy-tint);
+}
+
+.hc-desig--lead {
+  color: #c2410c;
+  background: var(--hc-accent-tint);
+}
+
+.hc-email {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--hc-navy);
+  text-decoration: none;
+  word-break: break-all;
+}
+
+.hc-email:hover {
+  color: var(--hc-accent);
+  text-decoration: underline;
+}
+
+.hc-email svg {
+  flex-shrink: 0;
+  opacity: 0.6;
+}
+
+/* ── Mobile cards (below 640px) ── */
+.hc-cards {
+  display: none;
+}
+
+.hc-member-card {
+  background: var(--hc-card);
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.06);
+}
+
+.hc-mc-top {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.hc-mc-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.3rem;
+  min-width: 0;
+}
+
+.hc-mc-name {
+  font-weight: 600;
+  color: var(--hc-text);
+}
+
+.hc-mc-no {
+  align-self: flex-start;
+  font-size: 0.8rem;
+  color: var(--hc-muted);
+}
+
+.hc-mc-details {
+  margin-top: 0.85rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--hc-border);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.hc-mc-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  font-size: 0.9rem;
+}
+
+.hc-mc-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--hc-muted);
+}
+
+/* ── Empty state ── */
+.hc-empty {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: var(--hc-muted, #6b7280);
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+
+.hc-empty p {
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .hc-table-wrap {
+    display: none;
+  }
+
+  .hc-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}
